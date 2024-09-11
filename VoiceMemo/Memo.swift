@@ -9,10 +9,12 @@ import Foundation
 import SwiftData
 
 @Model
-final class Item {
+final class Memo {
     var timestamp: Date
+    var audioData: Data
     
-    init(timestamp: Date) {
-        self.timestamp = timestamp
+    init(audioData: Data) {
+        self.timestamp = Date.now
+        self.audioData = audioData
     }
 }
